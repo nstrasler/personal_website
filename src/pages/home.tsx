@@ -7,7 +7,7 @@ function App() {
         <p className="mb-4">
           Noah Strasler</p>
         <p>
-          This is a test.</p>
+          This is a test x2.</p>
       </h1>
 
     </div>
