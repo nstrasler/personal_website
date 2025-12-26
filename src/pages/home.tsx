@@ -2,10 +2,12 @@ import '../App.css'
 
 function App() {
   return (
-    <div>
+    <div className = "flex justify-center items-center h-screen">
       <h1>
-        Noah Strasler
+        <p className="mb-4">Noah Strasler</p>
+        <p> This is a test for a paragraph.</p>
       </h1>
+
     </div>
   )
 }
