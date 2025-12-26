@@ -1,16 +1,16 @@
 import '../index.css'
 
-function Home() {
+function Projects() {
   return (
     <div className = "flex justify-center items-center h-screen">
       <h1>
         <p className="mb-4">
           Noah Strasler</p>
         <p>
-          Home Page</p>
+        Projects Page</p>
       </h1>
     </div>
   )
 }
 
-export default Home
+export default Projects
