@@ -17,4 +17,3 @@ Thumbs.db
 .vite/
 
 # Firebase config
-src/firebase.ts
