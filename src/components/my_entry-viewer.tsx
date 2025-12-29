@@ -3,9 +3,10 @@ import { db } from '../firebase';
 import { useEffect, useState } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from '../firebase';
+import { ScrollArea } from "@/components/ui/scroll-area"
 
 export function MyEntryViewer() {
-  const [entries, setEntries] = useState<Array<{ id: string; [key: string]: any }>>([]);
+  const [entries, setEntries] = useState<Array<{ id: string;[key: string]: any }>>([]);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, user => {
@@ -22,9 +23,21 @@ export function MyEntryViewer() {
 
   return (
     <div>
-      {entries.map(entry => (
-        <div key={entry.id}>{JSON.stringify(entry)}</div>
-      ))}
+      <h1 className='mb-4 text-2xl text-center'>Submissions</h1>
+      <ScrollArea className="rounded-md border p-4 h-80 w-full max-w-xl sm:h-96 sm:max-w-2xl">
+        {entries.length === 0 ? (
+          <div>No entries found.</div>
+       ) : (
+        entries.map(entry => (
+        <div key={entry.id} className="p-4 border border-border rounded-md w-full flex flex-col mb-4">
+          <div><span className="font-semibold">{entry.name}</span></div>
+          <div><span className="font-semibold">{entry.email}</span></div>
+          <div className="font-semibold">Message:</div>
+          <div className="break-all whitespace-pre-line w-full">{entry.message}</div>
+        </div>
+        ))
+    )}
+      </ScrollArea>
     </div>
   );
 }

@@ -1,20 +1,44 @@
 import '../index.css'
+import { useEffect, useState } from 'react';
 import { SignIn } from '@/components/sign_in.tsx';
 import { MyEntryViewer } from '@/components/my_entry-viewer';
+import { auth } from '@/firebase';
 
 function Admin() {
+  const [user, setUser] = useState<any>(null);
+  const [loading, setLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged(user => {
+      setUser(user);
+      setLoading(false);
+    });
+    return () => unsubscribe();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="flex flex-col items-center justify-center h-screen">
+        <div></div>
+      </div>
+    );
+  }
+
   return (
-    <div className = "flex flex-col items-center justify-center h-screen">
-      <h1>
-        <p className="mb-4">
-          Noah Strasler</p>
-        <p>
-          Admin Page</p>
-      </h1>
-      <SignIn />
-      <MyEntryViewer />
+    <div className="flex flex-col items-center justify-center h-screen">
+      {!user && (
+        <>
+          <h1 className='mb-10 text-3xl'>Sign In to View Entries</h1>
+          <SignIn />
+        </>
+      )}
+      {user && (
+        <div className="mt-40">
+          <MyEntryViewer />
+        </div>
+      )}
     </div>
-  )
+  );
 }
 
 export default Admin
