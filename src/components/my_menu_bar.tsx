@@ -10,7 +10,7 @@ import {
 export function MyMenuBar() {
 
     return (
-        <div className="layout">
+        <div>
             <Menubar>
             <MenubarMenu>
                 <MenubarTrigger>Navigate</MenubarTrigger>
@@ -30,9 +30,6 @@ export function MyMenuBar() {
                 </MenubarContent>
             </MenubarMenu>
             </Menubar>
-            <main>
-                <Outlet />
-            </main>
         </div>
     )
 }

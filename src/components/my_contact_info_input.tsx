@@ -8,8 +8,8 @@ import {
   FieldGroup,
   FieldLabel,
   FieldSet,
-} 
-from "@/components/ui/field"
+}
+  from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
 
 export function MyContactInfoInput() {
@@ -37,52 +37,52 @@ export function MyContactInfoInput() {
   };
 
   return (
-    <div className="w-full max-w-md">
+    <div className="w-full max-w-md mx-auto">
       <h1 className='text-xl text-center mb-4'>
-      I'd love to hear from you! Please fill out the form below to get in touch. <br /><br /> (｡◕‿◕｡)
+        I'd love to hear from you! Please fill out the form below to get in touch. <br /><br /> (｀・ω・´)
       </h1>
       <form onSubmit={handleSubmit}>
-      <FieldSet>
-        <FieldGroup>
-          <Field>
-            <FieldLabel htmlFor="Name">Name</FieldLabel>
-            <Input
-              id="Name"
-              type="text"
-              placeholder="Name"
-              value={name}
-              onChange={e => setName(e.target.value)}
-              className="bg-white text-black border-gray-300 dark:bg-zinc-900 dark:text-white dark:border-zinc-700"
-            />
-          </Field>
-          <Field>
-            <FieldLabel htmlFor="Email">Email</FieldLabel>
-            <Input
-              id="Email"
-              type="email"
-              placeholder="Email"
-              value={email}
-              onChange={e => setEmail(e.target.value)}
-              className="bg-white text-black border-gray-300 dark:bg-zinc-900 dark:text-white dark:border-zinc-700"
-            />
-          </Field>
-          <Field>
-            <FieldLabel htmlFor="Message">Message</FieldLabel>
-            <textarea
-              className="h-40 p-2 border rounded w-full bg-white text-black border-gray-300 dark:bg-zinc-900 dark:text-white dark:border-zinc-700"
-              id="Message"
-              placeholder="Type your message..."
-              value={message}
-              onChange={e => setMessage(e.target.value)}
-            />
-            <div className="flex justify-center mt-4">
-              <Button type="submit" disabled={sent}>
-                {sent ? "Message Sent!" : "Send Message"}
-              </Button>
-            </div>
-          </Field>
-        </FieldGroup>
-      </FieldSet>
+        <FieldSet>
+          <FieldGroup className="flex flex-col items-center w-full">
+            <Field className="w-full flex flex-col items-center">
+              <FieldLabel htmlFor="Name" className="text-center w-full">Name</FieldLabel>
+              <Input
+                id="Name"
+                type="text"
+                placeholder="Name"
+                value={name}
+                onChange={e => setName(e.target.value)}
+                className="bg-white text-black border-gray-300 dark:bg-zinc-900 dark:text-white dark:border-zinc-700 w-full max-w-xs mx-auto"
+              />
+            </Field>
+            <Field className="w-full flex flex-col items-center">
+              <FieldLabel htmlFor="Email" className="text-center w-full">Email</FieldLabel>
+              <Input
+                id="Email"
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={e => setEmail(e.target.value)}
+                className="bg-white text-black border-gray-300 dark:bg-zinc-900 dark:text-white dark:border-zinc-700 w-full max-w-xs mx-auto"
+              />
+            </Field>
+            <Field className="w-full flex flex-col items-center">
+              <FieldLabel htmlFor="Message" className="text-center w-full">Message</FieldLabel>
+              <textarea
+                className="h-40 p-2 border rounded w-full max-w-xs mx-auto bg-white text-black border-gray-300 dark:bg-zinc-900 dark:text-white dark:border-zinc-700"
+                id="Message"
+                placeholder="Type your message..."
+                value={message}
+                onChange={e => setMessage(e.target.value)}
+              />
+              <div className="flex justify-center mt-4">
+                <Button type="submit" disabled={sent}>
+                  {sent ? "Message Sent!" : "Send Message"}
+                </Button>
+              </div>
+            </Field>
+          </FieldGroup>
+        </FieldSet>
       </form>
     </div>
   )

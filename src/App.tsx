@@ -1,21 +1,22 @@
- import { createBrowserRouter, RouterProvider, Link, Outlet } from "react-router-dom";
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import Home from './pages/home.tsx'
 import About from './pages/about.tsx'
 import Projects from './pages/projects.tsx'
 import Admin from "./pages/admin.tsx";
-import { MyContactInfoInput } from '@/components/my_contact_info_input.tsx';
 import { ThemeProvider } from "@/components/theme-provider"
 import MyMenuBar from '@/components/my_menu_bar.tsx';
+import CurrentUserLabel from "./components/current_user_label.tsx";
 
 const RootLayout = () => (
-  <>
-    <div>
-      <MyMenuBar />
-    </div>
-    <div className='flex flex-col items-center mb-40'>
-        <MyContactInfoInput />
-    </div>
-  </>
+  <div>
+    <CurrentUserLabel />
+    <MyMenuBar />
+    
+    
+    
+    
+    <Outlet/>
+  </div>
 );
 
 const router = createBrowserRouter([
@@ -33,8 +34,8 @@ const router = createBrowserRouter([
 
 export default function App() {
   return (
-  <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-    <RouterProvider router={router} />
-  </ThemeProvider>
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <RouterProvider router={router} />
+    </ThemeProvider>
   );
 }
