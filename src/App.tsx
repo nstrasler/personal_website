@@ -9,12 +9,10 @@ import CurrentUserLabel from "./components/current_user_label.tsx";
 
 const RootLayout = () => (
   <div>
-    <CurrentUserLabel />
-    <MyMenuBar />
-    
-    
-    
-    
+    <div className="sticky top-0 z-50 bg-background w-full">
+      <CurrentUserLabel />
+      <MyMenuBar />
+    </div>
     <Outlet/>
   </div>
 );

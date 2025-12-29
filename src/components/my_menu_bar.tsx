@@ -8,7 +8,6 @@ import {
 } from "@/components/ui/menubar"
 
 export function MyMenuBar() {
-
     return (
         <div>
             <Menubar>

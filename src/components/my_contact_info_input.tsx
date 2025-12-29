@@ -52,7 +52,7 @@ export function MyContactInfoInput() {
                 placeholder="Name"
                 value={name}
                 onChange={e => setName(e.target.value)}
-                className="bg-white text-black border-gray-300 dark:bg-zinc-900 dark:text-white dark:border-zinc-700 w-full max-w-xs mx-auto"
+                className="bg-white text-black border-gray-300 dark:bg-zinc-900 dark:text-white dark:border-zinc-700"
               />
             </Field>
             <Field className="w-full flex flex-col items-center">
@@ -63,13 +63,14 @@ export function MyContactInfoInput() {
                 placeholder="Email"
                 value={email}
                 onChange={e => setEmail(e.target.value)}
-                className="bg-white text-black border-gray-300 dark:bg-zinc-900 dark:text-white dark:border-zinc-700 w-full max-w-xs mx-auto"
+                className="bg-white text-black border-gray-300 dark:bg-zinc-900 dark:text-white dark:border-zinc-700"
               />
             </Field>
             <Field className="w-full flex flex-col items-center">
               <FieldLabel htmlFor="Message" className="text-center w-full">Message</FieldLabel>
               <textarea
-                className="h-40 p-2 border rounded w-full max-w-xs mx-auto bg-white text-black border-gray-300 dark:bg-zinc-900 dark:text-white dark:border-zinc-700"
+                className=" bg-white text-black border-gray-300 dark:bg-zinc-900 dark:text-white dark:border-zinc-700 
+                h-40 p-2 border rounded"
                 id="Message"
                 placeholder="Type your message..."
                 value={message}
