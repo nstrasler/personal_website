@@ -1,28 +1,29 @@
-
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../firebase';
 import { useEffect, useState } from 'react';
+import { onAuthStateChanged } from 'firebase/auth';
+import { auth } from '../firebase';
 
 export function MyEntryViewer() {
-
-  const [entries, setEntries] = useState<Array<{ id: string;[key: string]: any }>>([]);
+  const [entries, setEntries] = useState<Array<{ id: string; [key: string]: any }>>([]);
 
   useEffect(() => {
-
-    async function fetchEntries() {
-      const querySnapshot = await getDocs(collection(db, 'contactMessages'));
-      setEntries(querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
-    }
-    fetchEntries();
+    const unsubscribe = onAuthStateChanged(auth, user => {
+      if (user) {
+        getDocs(collection(db, 'contactMessages')).then(querySnapshot => {
+          setEntries(querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
+        });
+      } else {
+        setEntries([]);
+      }
+    });
+    return unsubscribe;
   }, []);
 
-
   return (
-    <div>    
+    <div>
       {entries.map(entry => (
-        <div key={entry.id} >
-          {JSON.stringify(entry)}
-        </div>
+        <div key={entry.id}>{JSON.stringify(entry)}</div>
       ))}
     </div>
   );
