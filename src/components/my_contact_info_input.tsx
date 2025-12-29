@@ -12,7 +12,7 @@ import {
 from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
 
-export function FieldInput() {
+export function MyContactInfoInput() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -84,4 +84,4 @@ export function FieldInput() {
   )
 }
 
-export default FieldInput
+export default MyContactInfoInput
