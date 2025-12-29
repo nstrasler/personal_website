@@ -20,6 +20,10 @@ export function MyContactInfoInput() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!name.trim() || !email.trim() || !message.trim()) {
+      alert("Form not submitted. Please fill out all fields.");
+      return;
+    }
     await addDoc(collection(db, "contactMessages"), {
       name,
       email,
@@ -55,7 +59,7 @@ export function MyContactInfoInput() {
             <FieldLabel htmlFor="Email">Email</FieldLabel>
             <Input
               id="Email"
-              type="text"
+              type="email"
               placeholder="Email"
               value={email}
               onChange={e => setEmail(e.target.value)}
