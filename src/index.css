@@ -119,5 +119,10 @@
   }
   body {
     @apply bg-background text-foreground;
+    background-image: url('/background_2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat-x;
+    cursor: url('/cursor.png') 16 16, pointer;
   }
 }

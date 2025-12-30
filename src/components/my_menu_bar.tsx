@@ -7,10 +7,13 @@ import {
   MenubarTrigger,
 } from "@/components/ui/menubar"
 
-export function MyMenuBar() {
+interface MyMenuBarProps {
+    className?: string;
+}
+export function MyMenuBar({ className }: MyMenuBarProps) {
     return (
         <div>
-            <Menubar>
+            <Menubar className={className}>
             <MenubarMenu>
                 <MenubarTrigger>Navigate</MenubarTrigger>
                 <MenubarContent>
