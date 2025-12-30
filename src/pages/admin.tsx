@@ -25,18 +25,24 @@ function Admin() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen">
-      {!user && (
-        <>
-          <h1 className='mb-10 text-3xl'>Sign In to View Entries</h1>
-          <SignIn />
-        </>
-      )}
-      {user && (
-        <div className="mt-40">
-          <MyEntryViewer />
+
+    <div className='flex flex-col justify-center items-center h-screen my-20'>
+      <div className="bg-zinc-900/80 backdrop-blur-sm bg rounded-xl shadow-lg p-8 border 
+      border-gray-400 flex flex-col items-center">
+        <div className="flex flex-col items-center justify-center h-screen">
+          {!user && (
+            <>
+              <h1 className='mb-10 text-3xl'>Sign In to View Entries</h1>
+              <SignIn />
+            </>
+          )}
+          {user && (
+            <div >
+              <MyEntryViewer />
+            </div>
+          )}
         </div>
-      )}
+      </div>
     </div>
   );
 }

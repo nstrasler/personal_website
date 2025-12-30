@@ -38,8 +38,8 @@ export function MyContactInfoInput() {
 
   return (
     <div className="w-full max-w-md mx-auto">
-      <h1 className='text-xl text-center mb-4'>
-        I'd love to hear from you! Please fill out the form below to get in touch. <br /><br /> (｀・ω・´)
+      <h1 className='text-lg text-center mb-4'>
+        I'd love to hear from you! <br/> Please fill out the form below to get in touch.
       </h1>
       <form onSubmit={handleSubmit}>
         <FieldSet>

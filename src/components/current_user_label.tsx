@@ -13,7 +13,7 @@ function CurrentUserLabel() {
 
   return (
     <div className="rounded-sm p-4 border border-border">
-      <div className="text-sm text-white">Current User: {userEmail}
+      <div className="text-sm text-white font-semibold">Current User: {userEmail}
       </div>
     </div>
   );
