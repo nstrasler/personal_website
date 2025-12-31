@@ -23,7 +23,7 @@ export function MyEntryViewer() {
 
   return (
     <div>
-      <h1 className='mb-4 text-2xl text-center'>Submissions</h1>
+      <h1 className='mb-8 text-2xl text-center'>Submissions</h1>
       <ScrollArea className="rounded-md border p-4 h-80 w-full max-w-xl sm:h-96 sm:max-w-2xl bg-zinc-900 dark:bg-zinc-900">
         {entries.length === 0 ? (
           <div>No entries found.</div>

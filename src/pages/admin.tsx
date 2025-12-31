@@ -26,10 +26,10 @@ function Admin() {
 
   return (
 
-    <div className='flex flex-col justify-center items-center h-screen my-20'>
+    <div className='flex flex-col justify-center items-center my-20 min-h-screen'>
       <div className="bg-zinc-900/80 backdrop-blur-sm bg rounded-xl shadow-lg p-8 border 
-      border-gray-400 flex flex-col items-center">
-        <div className="flex flex-col items-center justify-center h-screen">
+      border-gray-400 flex flex-col items-center justify-center h-[600px] max-h-[90vh] w-full max-w-3xl">
+        <div className="flex flex-col items-center justify-center w-full h-full">
           {!user && (
             <>
               <h1 className='mb-10 text-3xl'>Sign In to View Entries</h1>
