@@ -10,8 +10,6 @@ function Projects() {
             Projects Page
         </h1>
         <p className="text-center text-base leading-relaxed break-words whitespace-pre-line">
-            Current project is to make the background of this cursor image transparent. 
-            <br/>(it really shouldn't be this hard to do without photoshop)
             <br/><br/>
             "YOUR PROJECT HERE".
             <br/>(Seriously, give me a project to work on!)
