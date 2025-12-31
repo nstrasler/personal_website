@@ -11,9 +11,9 @@ function About() {
           <br /><br />
           I am a current computer science student at Grand Valley University looking to graduate this May 2026.
           <br /><br />
-          I personally value good people, good work, and ability to understand how things work under the surface. This rings true for me more and more as I get older and witness how technology and the world changes. (Looking at you AI revolution)
+          I personally value good people, good work, and ability to understand how things work under the surface. This rings true for me more and more as I get older and witness how technology and the world keeps rapidly changing. (Looking at you AI revolution)
           <br /><br />
-          Even in typing this bio I am being bombarded with gemini reeeeeally wanting to give me a hand.
+          Even in typing this bio I am being bombarded with gemini inline reeeeeally wanting to give me a hand.
           <br /><br />
           I love technology, the sphere around it, and the whole ecosystem of progress it's a part of. I hope that one day I’ll be in a position to contribute to that progress!
         </div>
