@@ -1,5 +1,6 @@
 # React + TypeScript + Vite + Tailwind
 # Vercel hosting URL
+# google firebase backend
 # https://personal-website-one-smoky.vercel.app/
 
 # Sign for admin is: 

@@ -40,7 +40,7 @@ export function SignIn() {
               <Input
                 id="email"
                 type="text"
-                placeholder="n.strasler@yahoo.com"
+                placeholder="email"
                 value={email}
                 onChange={e => setEmail(e.target.value)}
                 className="bg-white text-black border-gray-300 dark:bg-zinc-900 dark:text-white dark:border-zinc-700"
@@ -51,7 +51,7 @@ export function SignIn() {
               <Input
                 id="password"
                 type="password"
-                placeholder="password123"
+                placeholder="password"
                 value={password}
                 onChange={e => setPassword(e.target.value)}
                 className="bg-white text-black border-gray-300 dark:bg-zinc-900 dark:text-white dark:border-zinc-700"
